@@ -3,5 +3,9 @@
     public abstract class Monster: Character
     {
 
+        public override string ToString()
+        {
+            return this.GetType().Name;
+        }
     }
 }
