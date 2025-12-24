@@ -9,7 +9,6 @@ namespace TI_Net2025_HeroesVsMonster.Models.Heroes
             if(Name == "Dante")
             {
                 InitStats(DiceType.D100);
-                Heal(PvMax);
             }
         }
     }

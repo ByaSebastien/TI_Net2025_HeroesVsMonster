@@ -5,7 +5,6 @@ using TI_Net2025_HeroesVsMonster.Models.Monsters;
 Human dante = new Human("Dante");
 List<Monster> monsters = MonsterFactory.GenerateMonsters(dante,10);
 
-dante.AddDieEvent(dante.Loot);
 dante.AddDieEvent((c) => Console.WriteLine("Elle est ou ta chaise?"));
 
 

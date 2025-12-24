@@ -16,7 +16,7 @@ namespace TI_Net2025_HeroesVsMonster.Models
             } 
             private set
             {
-                _currentPv = Math.Min(PvMax,Math.Max(0, value));
+                _currentPv = Math.Clamp(value, 0, PvMax);
                 if( _currentPv <= 0)
                 {
                     Console.WriteLine(this + " is Dead");
@@ -57,7 +57,6 @@ namespace TI_Net2025_HeroesVsMonster.Models
 
         protected void InitStats(DiceType dice)
         {
-
             Atk = dice.Throw(5, 3);
             AtkSpec = dice.Throw(5, 3);
             Def = dice.Throw(5, 3);

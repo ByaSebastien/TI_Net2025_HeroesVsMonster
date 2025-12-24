@@ -12,7 +12,10 @@ namespace TI_Net2025_HeroesVsMonster.Utils
             {
                 throws.Add(rand.Next((int)dice) + 1);
             }
-            return throws.OrderByDescending(it => it).Take(toKeep <= 0 ? toThrow : toKeep).Sum();
+            return throws
+                .OrderByDescending(it => it)
+                .Take(toKeep <= 0 ? toThrow : toKeep)
+                .Sum();
         }
     }
 
